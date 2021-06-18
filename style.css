@@ -1,0 +1,55 @@
+*::before,
+*::after,
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Fira Sans';
+    background-color: whitesmoke;
+    color: #f9f9f9;
+    background-image: -webkit-linear-gradient(
+        to right top,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.7)
+    );
+    background-image: -o-linear-gradient(
+        to right top,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.7)
+    );
+    background-image: linear-gradient(
+        to right top,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.7)
+    );
+    position: relative;
+}
+
+.centerize {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    width: 80%;
+    padding: 20px 0;
+}
+
+.container h1 {
+    width: 500px;
+    text-align: center;
+    font-weight: 400;
+    margin: 0 auto;
+    color: tomato;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
