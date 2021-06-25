@@ -1,0 +1,311 @@
+/************** { Into Preloader } ***************/
+.mask {
+	background: whitesmoke;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 100000;
+}
+
+#intro-loader {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: no-repeat center url("../images/Rainbow.gif");
+}
+
+/************** { Header and Nav CSS } ***************/
+header.profolio-header a {
+	color: tomato;
+}
+
+.profolio-nav .nav-link {
+	text-transform: uppercase;
+	font-size: 14px;
+	padding-left: 1rem !important;
+	padding-right: 1rem !important;
+}
+
+.profolio-nav .nav-link > span {
+	position: relative;
+	display: inline-block;
+	padding-bottom: 2px;
+}
+
+.profolio-nav .nav-link > span::before {
+	content: '';
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: #ff8974;
+	visibility: visible;
+	transform: scaleX(0);
+	transition: all 0.3s ease-in-out;
+}
+
+.profolio-nav .nav-link:hover > span::before { transform: scaleX(1.0); }
+.profolio-nav .nav-link.active > span::before { transform: scaleX(1.0); }
+
+
+
+/************** { Cover CSS } ***************/
+.profolio-cover {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.cover-description h3 {
+	font-weight: 400;
+}
+
+
+/************** { About Section } ***************/
+.body-left figure.about-profile {
+	max-width: 80%;
+	max-height: 400px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.body-left figure.about-profile img {
+	width: 100%;
+	height: 100%;
+}
+
+.body-left figure.about-profile figcaption {
+	width: 100%;
+	min-height: 120px;
+	background-color: #343a40c4;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	color: tomato;
+}
+
+/************** { Portfolio Section } ***************/
+.work-item {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img-container {
+	width: 80%;
+	height: 80%;
+}
+
+.img-container img {
+	border-radius: 5px;
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+}
+
+.img-container img:hover { box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.9); }
+
+.img-popper {
+	display: none;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+.img-popper .close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: whitesmoke;
+	font-size: 2.25rem;
+	transition: all .3s ease-in-out;
+}
+
+.img-popper .close:hover,
+.img-popper .close:focus {
+	cursor: pointer;
+	color: #bbb;
+}
+
+.popper-content,
+.popper-caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 768px;
+}
+
+.popper-content {
+	padding-top: 20px;
+}
+
+.popper-caption {
+	text-align: center;
+	padding-top: 20px;
+	height: 150px;
+	color: tomato;
+	font-weight: lighter;
+	font-size: 1.5rem;
+}
+
+
+/************** { Skill Section } ***************/
+ul.skill-bar li {
+	list-style: none outside none;
+	text-align: left;
+}
+
+ul.skill-bar li:last-child span {
+	margin-bottom: 0;
+}
+
+ul.skill-bar li .skill-bg {
+	background: none repeat scroll 0 0 #cccccc;
+	border-radius: 6px;
+	margin-bottom: 20px;
+}
+
+ul.skill-bar li span {
+	width: 0;
+	height: 36px;
+	display: block;
+	border-radius: 0 15px 15px 0;
+	overflow: visible !important;
+	position: relative;
+	background-color: #474d5d;
+}
+
+ul.skill-bar li p {
+	padding-bottom: 2px;
+}
+
+ul.skill-bar li span strong {
+	font-size: 14px;
+	font-weight: 400;
+	color: #faf8fa;
+	display: block;
+	position: absolute;
+	left: 12px;
+	top: 12px;
+	line-height: 12px !important;
+	white-space: nowrap;
+}
+
+
+/************** { Skill-Chart } ***************/
+.skill-chart {
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.skill-chart canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.skill-chart .percent {
+	display: inline-block;
+	line-height: 150px;
+	font-size: 1.6rem;
+	z-index: 2;
+}
+
+.skill-chart .percent::after {
+	content: '%';
+	font-size: 1rem;
+	margin-left: 5px;
+}
+
+
+/************** { Contact Section } ***************/
+.social-link {
+	color: tomato;
+	transition: all 0.3s linear;
+}
+
+.social-link:hover {
+	color: #ff8974;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+}
+
+.form-sec {
+	max-width: 580px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.form-sec .form-heading h4 {
+	font-size: 24px;
+	font-weight: 400;
+	color: tomato;
+}
+
+input {
+	font-family: 'Fira Sans';
+}
+
+.form-control {
+	background-color: #454d54 !important;
+	border-color: #222;
+}
+
+textarea.form-control {
+	border: none;
+}
+
+input.form-control,
+textarea.form-control {
+	background-color: #444;
+}
+
+
+/************** { Footer } ***************/
+footer.profolio-footer {
+	border-top: 1px solid #777;
+}
+
+
+/************** { Back to top } ***************/
+#back-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background: #1e1e1e;
+	color: #fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	zoom: 1;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+	z-index: 100;
+	display: none;
+}
+
+#back-top:hover {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}

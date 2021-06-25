@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&display=swap');
+
+body {
+	font-family: "Fira Sans", "Helvetica Nue", Helvetica, Verdana, Sans-Serif, Serif;
+	background-color: #efefef;
+	color: #414141;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+
+/************** { Theme Default CSS } ***************/
+.theme-color {
+	color: #ff6347;
+}
+
+.bg-light {
+	background-color: #efefef !important;
+}
+
+.bg-dark {
+	background-color: #474D5D !important;
+}
+
+.default-padding {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.theme-btn {
+	padding: 1rem 3rem;
+	border-radius: 30px;
+	background-color: #ff6347;
+	color: #faf8fa !important;
+	font-size: 1.05rem;
+	background: linear-gradient(135deg, #ff8974 0%, #ff4c2c 100%);
+	box-shadow: 0 8px 16px -11px rgba(0, 0, 0, 0.9);
+	transition: box-shadow .3s ease-in-out;
+	text-decoration: none !important;
+}
+
+.theme-btn:hover,
+.theme-btn:focus {
+	color: #faf8fa;
+	box-shadow: 0 2px 4px -11px rgba(0, 0, 0, 0.9) !important;
+}
+
+.theme-heading {
+	display: flex;
+	justify-content: center;
+}
+
+.theme-heading h2 {
+	color: #ff6347;
+	font-size: 2rem;
+	font-weight: 400;
+	display: inline-block;
+	position: relative;
+}
+
+.theme-heading h2::before,
+.theme-heading h2::after {
+	content: '';
+	width: 30px;
+	height: 2px;
+	position: absolute;
+	background-color: #ff6347;
+	visibility: visible;
+	top: 20px;
+}
+
+.theme-heading h2::before {
+	left: -40px; right: auto;
+}
+
+.theme-heading h2::after {
+	left: auto; right: -40px;
+}
+
+@media screen and (max-width: 480px) {
+	.theme-heading h2 {
+		font-size: 24px;
+		font-weight: 300;
+	}
+}
+
+/************** { Effect CSS } ***************/
+.item_top {
+	top: -30px;
+	opacity: 0;
+	position: relative;
+}
+
+.item_bottom {
+	bottom: -30px;
+	opacity: 0;
+	position: relative;
+}
+
+.item_left {
+	left: -60px;
+	opacity: 0;
+	position: relative;
+}
+
+.item_right {
+	right: -60px;
+	opacity: 0;
+	position: relative;
+}
+
+.item_fade_in {
+	opacity: 0;
+	position: relative;
+	padding-left: 0px;
+	right: 0px;
+}
